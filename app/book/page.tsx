@@ -273,7 +273,7 @@ export default function BookingFormPage() {
         <div className="mb-8 flex flex-col gap-2">
           <h1 className="text-2xl font-bold tracking-tight">Expandable Booking Form (Client Demo)</h1>
           <p className="text-sm text-white/70">
-            UI-only (no backend). Step 2 expands after Step 1. “Get a Counsel” reveals full flow and pricing summary.
+            Demo UI(no backend). expands hoga after form pura bharne par. sirf get a Counsel chalega abhi.
           </p>
 
           {/* Stepper */}
@@ -410,7 +410,7 @@ export default function BookingFormPage() {
 
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
               <div className="text-xs text-white/60">
-                Step 2 unlocks when required fields look valid (demo rule).
+                neeche form unlocks hoga jab sare required fields valid honge, abhi simple validation lagaya ha bas baad me pura acche se karenge backend se.
               </div>
               <button
                 type="button"
@@ -492,7 +492,7 @@ export default function BookingFormPage() {
                           className="mt-2 cursor-pointer rounded-2xl border border-dashed border-white/15 bg-white/5 p-5 text-center hover:bg-white/8"
                         >
                           <div className="text-sm font-semibold">Click to upload or drag & drop</div>
-                          <div className="mt-1 text-xs text-white/60">PDF, DOCX, images — (demo; not uploaded anywhere)</div>
+                          <div className="mt-1 text-xs text-white/60">PDF, DOCX, images</div>
                           <input
                             ref={fileRef}
                             type="file"
@@ -701,8 +701,8 @@ export default function BookingFormPage() {
                     For the UI demo, you can either:
                   </p>
                   <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-white/70">
-                    <li>Show a tailored form later (similar to “Get a Counsel”).</li>
-                    <li>Or directly route to a quote/payment page.</li>
+                    <li>baad me banaunga bola tha na to kyu click kiya</li>
+                    <li>paise do ab</li>
                   </ul>
 
                   <div className="mt-4 flex items-center justify-between gap-3">
@@ -728,7 +728,7 @@ export default function BookingFormPage() {
         </div>
 
         <div className="mt-10 text-xs text-white/50">
-          Note: This is **UI only**. When you connect Express/MySQL later, you’ll replace the OTP + payment alerts with real API calls.
+          Note: This is **UI only**.backend connection required by yours truly, OTP google service lenge + payment alerts dalni ha kya apne me bhi.
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ const FEES = {
     standard_24_48: 0,
     within_6: 500,
     within_2: 1000,
-  } satisfies Record<Urgency, number>,
+  },
 };
 
 const PRIMARY_SERVICES: { key: PrimaryService; label: string; desc: string }[] = [
@@ -238,7 +238,6 @@ export default function BookingFormPage() {
   ]);
       useEffect(() => {
         if (canGoStep2) setStep(2);
-        else setStep(1);
     }, [canGoStep2]);
 
   const counselReady = useMemo(() => {
@@ -412,19 +411,9 @@ export default function BookingFormPage() {
               </div>
             </div>
 
-            {/*<div className="mt-5 flex flex-wrap items-center justify-between gap-3">*/}
               <div className="text-xs text-white/60">
                 neeche form unlocks hoga jab sare required fields valid honge, abhi simple validation lagaya ha bas baad me pura acche se karenge backend se.
               </div>
-              {/*<button
-                type="button"
-                onClick={() => setStep(2)}
-                disabled={!canGoStep2}
-                className="rounded-xl border border-white/10 bg-white/10 px-5 py-2 text-sm font-semibold hover:bg-white/15 disabled:opacity-40"
-              >
-                Continue to Services
-              </button>
-            </div>*/}
           </Card>
 
           {/* STEP 2 (expands) */}

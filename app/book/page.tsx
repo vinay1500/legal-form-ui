@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 type PrimaryService =
   | "get_counsel"
@@ -211,6 +211,11 @@ export default function BookingFormPage() {
 
   const canGoStep2 = useMemo(() => {
     // minimal “demo validation”
+    useEffect(() => {
+        if (canGoStep2) setStep(2);
+        else setStep(1);
+    }, [canGoStep2]);
+
     const basicOk =
       name.trim().length > 1 &&
       gender !== "" &&
@@ -408,11 +413,11 @@ export default function BookingFormPage() {
               </div>
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+            {/*<div className="mt-5 flex flex-wrap items-center justify-between gap-3">*/}
               <div className="text-xs text-white/60">
                 neeche form unlocks hoga jab sare required fields valid honge, abhi simple validation lagaya ha bas baad me pura acche se karenge backend se.
               </div>
-              <button
+              {/*<button
                 type="button"
                 onClick={() => setStep(2)}
                 disabled={!canGoStep2}
@@ -420,7 +425,7 @@ export default function BookingFormPage() {
               >
                 Continue to Services
               </button>
-            </div>
+            </div>*/}
           </Card>
 
           {/* STEP 2 (expands) */}

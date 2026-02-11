@@ -211,11 +211,6 @@ export default function BookingFormPage() {
 
   const canGoStep2 = useMemo(() => {
     // minimal “demo validation”
-    useEffect(() => {
-        if (canGoStep2) setStep(2);
-        else setStep(1);
-    }, [canGoStep2]);
-
     const basicOk =
       name.trim().length > 1 &&
       gender !== "" &&
@@ -241,6 +236,10 @@ export default function BookingFormPage() {
     emailOtpSent,
     phoneOtpSent,
   ]);
+      useEffect(() => {
+        if (canGoStep2) setStep(2);
+        else setStep(1);
+    }, [canGoStep2]);
 
   const counselReady = useMemo(() => {
     if (!isCounsel) return false;

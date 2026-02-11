@@ -245,10 +245,10 @@ export default function BookingFormPage() {
       consultMode !== "" &&
       preferredDate !== "" &&
       timeWindow !== "" &&
-      urgency !== "" &&
+      //urgency !== "" &&
       pastLegalAction !== ""
     );
-  }, [isCounsel, legalDomain, caseDetails, consultMode, preferredDate, timeWindow, urgency, pastLegalAction]);
+  }, [isCounsel, legalDomain, caseDetails, consultMode, preferredDate, timeWindow, pastLegalAction]);
 
   const readyToBook = useMemo(() => {
     if (primaryService === "") return false;
